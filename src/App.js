@@ -38,7 +38,7 @@ function App() {
     <Router>
       <header>
         <Route exact path="/">
-          <Redirect to="/rgb/192/192/192" />
+          <Redirect to="/rgb/255/203/5" />
         </Route>
         <ul>
           <NavLink className="teal" to="/rgb/20/220/207">
