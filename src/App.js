@@ -1,11 +1,11 @@
 import './App.css';
 import {
-  Link,
   Redirect,
   BrowserRouter as Router,
   useParams,
   Switch,
   Route,
+  NavLink,
 } from 'react-router-dom';
 
 function RGB() {
@@ -41,9 +41,15 @@ function App() {
           <Redirect to="/rgb/192/192/192" />
         </Route>
         <ul>
-          <Link to="/rgb/192/192/192">Silver</Link>
-          <Link to="/rgb/220/20/60">Crimson</Link>
-          <Link to="/rgb/147/112/219">Purple</Link>
+          <NavLink className="teal" to="/rgb/20/220/207">
+            Teal
+          </NavLink>
+          <NavLink className="maize" to="/rgb/255/203/5">
+            Maize
+          </NavLink>
+          <NavLink className="blue" to="/rgb/0/39/76">
+            Blue
+          </NavLink>
         </ul>
       </header>
 

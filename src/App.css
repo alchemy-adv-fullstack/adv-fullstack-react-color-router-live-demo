@@ -1,5 +1,8 @@
+body {
+  color: darkslategray;
+}
 header {
-  background: black;
+  background: darkslategray;
   color: white;
   font-size: 1.5rem;
 }
@@ -23,4 +26,16 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 3rem;
+}
+
+.teal.active {
+  color: rgb(20, 220, 207);
+}
+
+.maize.active {
+  color: rgb(255, 203, 5);
+}
+
+.blue.active {
+  color: rgb(0, 39, 76);
 }
