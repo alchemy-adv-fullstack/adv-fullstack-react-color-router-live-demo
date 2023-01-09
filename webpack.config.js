@@ -10,7 +10,7 @@ module.exports = {
   output: {
     // Necessary for HTML 5 routes along with historyApiFallback.
     publicPath: '/',
-    path: __dirname + '/dist',
+    path: __dirname + '/build',
     filename: 'app.bundle.js',
     clean: true,
   },
