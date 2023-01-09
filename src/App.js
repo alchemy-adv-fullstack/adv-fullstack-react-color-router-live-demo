@@ -1,11 +1,11 @@
 import './App.css';
+import Layout from './Layout.jsx';
 import {
-  Redirect,
+  Routes,
+  Navigate,
   BrowserRouter as Router,
   useParams,
-  Switch,
   Route,
-  NavLink,
 } from 'react-router-dom';
 
 function RGB() {
@@ -18,44 +18,17 @@ function RGB() {
   );
 }
 
-function ScreenColor() {
-  return (
-    <div>
-      <Switch>
-        <Route exact path="/rgb/:r/:g/:b">
-          <RGB />
-        </Route>
-        <Route path="*">
-          <h1>Route not Found!</h1>
-        </Route>
-      </Switch>
-    </div>
-  );
-}
-
 function App() {
-  return (
+  return <>
     <Router>
-      <header>
-        <Route exact path="/">
-          <Redirect to="/rgb/255/203/5" />
-        </Route>
-        <ul>
-          <NavLink className="teal" to="/rgb/20/220/207">
-            Teal
-          </NavLink>
-          <NavLink className="maize" to="/rgb/255/203/5">
-            Maize
-          </NavLink>
-          <NavLink className="blue" to="/rgb/0/39/76">
-            Blue
-          </NavLink>
-        </ul>
-      </header>
-
-      <ScreenColor />
+      <Layout />
+      <Routes>
+        <Route path="/" element={<Navigate to="/rgb/255/203/5" /> } />
+        <Route path="/rgb/:r/:g/:b" element={<RGB />} />
+        <Route index element={ <h1>Route not Found!</h1> } />
+      </Routes>
     </Router>
-  );
+  </>;
 }
 
 export default App;
