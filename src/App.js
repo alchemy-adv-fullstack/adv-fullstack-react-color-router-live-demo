@@ -25,7 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/rgb/255/203/5" /> } />
         <Route path="/rgb/:r/:g/:b" element={<RGB />} />
-        <Route index element={ <h1>Route not Found!</h1> } />
+        <Route path="*" element={ <h1>Route not Found!</h1> } />
       </Routes>
     </Router>
   </>;
